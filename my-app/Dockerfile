@@ -10,6 +10,9 @@ COPY package*.json ./
 # Install frontend dependencies
 RUN npm install
 
+# Install Bootstrap
+RUN npm install bootstrap
+
 # Copy the entire frontend directory to the container
 COPY . .
 
