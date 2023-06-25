@@ -10,8 +10,14 @@ COPY package*.json ./
 # Install frontend dependencies
 RUN npm install
 
-# Copy the entire frontend directory to the container
-COPY . .
+# Copy the entire src directory to the container
+COPY src/ ./src/
+
+# Copy the public directory to the container
+COPY public/ ./public/
+
+# Copy the additional directory to the container
+COPY additional-directory/ ./additional-directory/
 
 # Build the frontend code
 RUN npm run build
