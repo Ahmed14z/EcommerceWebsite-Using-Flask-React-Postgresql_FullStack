@@ -19,10 +19,10 @@ RUN apt-get update && apt-get install -y curl && \
     apt-get install -y nodejs
 
 # Change to the frontend directory
-WORKDIR /app/frontend
+WORKDIR /app/my-app
 
 # Copy frontend package.json and package-lock.json to the container
-COPY frontend/package*.json ./
+COPY my-app/package*.json ./
 
 # Install frontend dependencies
 RUN npm install
