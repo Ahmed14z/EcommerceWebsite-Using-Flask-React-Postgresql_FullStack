@@ -29,11 +29,11 @@ services:
 
   frontend:
     container_name: frontend
-    build: .
+    build:
+      context: ./my-app
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    volumes:
-      - ./my-app:/app # Assuming your frontend code is inside the my-app folder
 
 volumes:
   pgdata: {}
