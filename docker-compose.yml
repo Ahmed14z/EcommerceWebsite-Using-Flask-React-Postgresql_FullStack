@@ -29,9 +29,7 @@ services:
 
   frontend:
     container_name: frontend
-    build:
-      context: .
-      dockerfile: Dockerfile # Path to your Dockerfile in the root directory
+    build: .
     ports:
       - "3000:3000"
     volumes:
